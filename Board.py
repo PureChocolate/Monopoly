@@ -17,7 +17,7 @@ class Board:
         rent[-2] = 50
         self.spaces.append(Space("Mediterranean Ave", rent,0,0,[],"None","Brown"))
         rent = defaultdict(lambda: 0)
-        self.spaces.append(Space("Community Chest", rent,0,0,[],"None","No Color"))
+        self.spaces.append(Space("Community Chest", rent,0,0,[],"None","No color"))
         rent[-1] = 60
         rent[0] = 4
         rent[1] = 20
@@ -33,7 +33,7 @@ class Board:
         self.spaces.append(Space("Income Tax",rent,0,0,[],"None", "No color"))
         rent = defaultdict(lambda: 0)    
         rent[-1] = 200
-        self.spaces.append(Space("Reading Railroad",rent,0,0,[],"None","Brown"))
+        self.spaces.append(Space("Reading Railroad",rent,0,0,[],"None","No color"))
         rent[-1] = 100
         rent[0] = 6
         rent[1] = 30
@@ -65,7 +65,7 @@ class Board:
         rent[-2] = 50
         self.spaces.append(Space("Connecticut Ave", rent,0,0,[],"None","Cyan"))
         rent = defaultdict(lambda: 0)
-        self.spaces.append(Space("Jail",rent,0,0,[],"None","No Color"))
+        self.spaces.append(Space("Jail",rent,0,0,[],"None","No color"))
         rent[-1] = 140
         rent[0] = 10
         rent[1] = 50
@@ -110,7 +110,7 @@ class Board:
         rent[-2] = 100
         self.spaces.append(Space("ST. James Place", rent,0,0,[],"None","Orange"))
         rent = defaultdict(lambda: 0)
-        self.spaces.append(Space("Community Chest", rent,0,0,[],"None","No Color"))
+        self.spaces.append(Space("Community Chest", rent,0,0,[],"None","No color"))
         rent[-1] = 180
         rent[0] = 14
         rent[1] = 70
@@ -131,7 +131,7 @@ class Board:
         rent[-2] = 100
         self.spaces.append(Space("New York Avenue",rent,0,0,[],"None", "Orange"))
         rent = defaultdict(lambda: 0)
-        self.spaces.append(Space("Free Parking", rent,0,0,[],"None","No Color"))
+        self.spaces.append(Space("Free Parking", rent,0,0,[],"None","No color"))
         rent[-1] = 220
         rent[0] = 18
         rent[1] = 90
@@ -184,7 +184,7 @@ class Board:
         rent[-2] = 150
         self.spaces.append(Space("Ventnor Ave",rent,0,0,[],"None", "Yellow"))
         rent = defaultdict(lambda: 0)
-        self.spaces.append(Space("Water Work", rent,0,0,[],"None","Brown"))
+        self.spaces.append(Space("Water Work", rent,0,0,[],"None","No color"))
         rent[-1] = 280
         rent[0] = 24
         rent[1] = 120
@@ -217,7 +217,7 @@ class Board:
         rent[-2] = 200
         self.spaces.append(Space("North Carolina Ave", rent,0,0,[],"None","Green"))
         rent = defaultdict(lambda: 0)
-        self.spaces.append(Space("Community Chest", rent,0,0,[],"None","No Color"))
+        self.spaces.append(Space("Community Chest", rent,0,0,[],"None","No color"))
         rent[-1] = 320
         rent[0] = 28
         rent[1] = 150
@@ -269,6 +269,7 @@ class Board:
             ps = a.occupiers
             for x in ps:
                 card += "|Player: " + x.name + (" " * (15 - len(a.owner))) + "\n"
+            card == "Rent: " + str(a.price) + (" " *   15) + "\n" 
             if counter % 5 == 0 or a == self.spaces[-1]:
                 temp.append(card)
                 strings0.append(temp)
