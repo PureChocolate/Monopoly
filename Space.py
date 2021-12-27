@@ -6,8 +6,19 @@ class Space:
         self.hotels = hotels
         self.occupiers = occupiers
         self.owner = owner # Player object or string name?
-        self.color = color
+        self.color = color.lower()
         self.price = rent[-1]
 
     def printer(self):
-        print(self.name, self.price, self.color, self.rent, self.hotels, self.houses, self.occupiers, self.owner)
+        a = self
+        card = "|--Color: " + a.color + "----|\n"
+        card += "|" + a.name
+        sp = 23 - len(a.name)
+        add = (" " * (sp-1))
+        card += add + "\n"
+        card += "|Buy:" + str(str(a.price)) + " Owner: " + a.owner + (" " * (8 - len(a.owner))) + "\n"
+        card += "|Houses:" + str(a.houses) + " Hotels: " + str(a.hotels) + "     \n"
+        ps = a.occupiers
+        for x in ps:
+            card += "|Player: " + x.name + (" " * (15 - len(a.owner))) + "\n"
+        print(card)
