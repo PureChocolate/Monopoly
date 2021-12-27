@@ -4,6 +4,8 @@ class Player:
         self.properties = properties
         self.position = position
         self.money = money
+        self.jail = False
+        self.jailTime = 0
     
     def showPlayer(self):
         print(self.name, "Owned properties: ", self.properties,"Currently At: ", self.position)
